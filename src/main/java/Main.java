@@ -15,8 +15,6 @@ public class Main {
         Person person3 = gen.generate2();
         System.out.println(person3);
 
-        Person person4 = gen.generate2();
-        System.out.println(person4);
     }
 
 }
