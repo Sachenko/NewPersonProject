@@ -42,9 +42,12 @@ class Person {
         this.money = m;
     }
 
+    Cup cup = new Cup();
+
     @Override
     public String toString() {
-        return "Name=" + getName() + "\n" + "Money=" + getMoney() + "\n" + "Age=" + getAge();
+        return "Name=" + getName() + "\n" + "Money=" + getMoney() + "\n" + "Age=" + getAge()
+                + "\n" + cup.getCup() + "\n" + "=============";
     }
 }
 
