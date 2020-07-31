@@ -1,13 +1,15 @@
+package Person;
 
-class Person {
+import TeaKit.Cup;
+
+public class Person {
 
     // Поля класса
     private String name;
     private int age;
     private double money;
 
-    public Person() {
-    }
+    public Person() {}
 
     // Конструктор класса
     public Person(String name, int age, double money) {
@@ -22,24 +24,12 @@ class Person {
         return name;
     }
 
-    public void setName(String n) {
-        this.name = n;
-    }
-
     public int getAge() {
         return age;
     }
 
-    public void setAge(int a) {
-        this.age = a;
-    }
-
     public double getMoney() {
         return money;
-    }
-
-    public void setMoney(double m) {
-        this.money = m;
     }
 
     Cup cup = new Cup();
