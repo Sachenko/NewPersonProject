@@ -1,10 +1,12 @@
 package TeaKit;
 
+
 public class Water {
-    private String water = "just some qt. water " + getWater() + "with temperature " + getTempWater();
+    private String water = "just some qt. water " + getWater() + "with temperature " + getInfoTempWater();
     private int tempWater;
     private int maxTempWater = 100;
     private int volumeWater;
+    private int colorWater;
 
     public Water() {
     }
@@ -18,12 +20,12 @@ public class Water {
         return volumeWater = 1;
     }
 
-    public int getTempWater() {
+    public int getInfoTempWater() {
         this.tempWater = randomTempWater();
         return tempWater;
     }
 
-    public int getMaxTempWater() {
+    public int getInfoMaxTempWater() {
         return maxTempWater;
     }
 }

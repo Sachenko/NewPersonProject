@@ -15,27 +15,33 @@ public class Kettle {
         for (; volumeKettle < maxVolumeKettle; ) {
             this.volumeKettle = volumeKettle + water1.getWater();
         }
-        this.tempKettle = water1.getTempWater();
+        this.tempKettle = water1.getInfoTempWater();
         return volumeKettle;
     }
 
-    public void pourWater() {
-
-    }
 
     public int preheatWater() {
-        this.tempKettle = water1.getTempWater();
-        this.heatMax = water1.getMaxTempWater();
-        for (; tempKettle < heatMax; tempKettle++) {
+        if (volumeKettle > 0) {
+            this.tempKettle = water1.getInfoTempWater();
+            this.heatMax = water1.getInfoMaxTempWater();
+            for (; tempKettle < heatMax; tempKettle++) {
+            }
+            return tempKettle;
+        } else {
+            return tempKettle;
         }
-        return tempKettle;
+
+
     }
 
-    public int getVolumeKettle() {
+    public int getInfoVolumeKettle() {
         return volumeKettle;
     }
 
-    public int getTempKettle() {
+    public int getInfoTempKettle() {
         return tempKettle;
+    }
+
+    public void getHotWater() {
     }
 }
