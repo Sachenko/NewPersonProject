@@ -9,10 +9,7 @@ public class Kettle {
     private int tempKettle;
     private int heatMax;
 
-
-
     Water water1 = new Water();
-
 
     public int fillKettleFullWater() {
         for (; volumeKettle < maxVolumeKettle; ) {
@@ -26,11 +23,11 @@ public class Kettle {
 
     }
 
-
     public int preheatWater() {
         this.tempKettle = water1.getTempWater();
         this.heatMax = water1.getMaxTempWater();
-        for (;tempKettle < heatMax;tempKettle++){}
+        for (; tempKettle < heatMax; tempKettle++) {
+        }
         return tempKettle;
     }
 
