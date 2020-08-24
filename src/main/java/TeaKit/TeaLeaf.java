@@ -1,8 +1,10 @@
 package TeaKit;
 
 public class TeaLeaf {
-    //Чайный лист при нагревании окрашивает воду и передает некие химические компоненты
-    //котоорые и оказывающие многоплановое и в целом благотворное воздействие на организм человека,
+
+
+    //Добавить метод при котором 1 чайная ложка чайного листа перекрашивает цвет чая
+    // и добавляет ему полезные свойства если ее нагреть в воде до нужной температуры
 
     private boolean profitTeaLeaf;
     private double numberOfTeaLeaf;
@@ -10,12 +12,11 @@ public class TeaLeaf {
 
     public TeaLeaf (double numberOfTeaLeaf) {
         this.numberOfTeaLeaf = numberOfTeaLeaf;
-    };
+    }
 
-    public double getTeaLeaf() {
+    public double getTeaLeaf(int numberOfTeaLeaf) {
         return numberOfTeaLeaf;
-
-    };
+    }
 
 
 

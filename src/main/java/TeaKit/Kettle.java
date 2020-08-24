@@ -1,47 +1,82 @@
 package TeaKit;
 
-import TeaKit.Water;
+public class Kettle extends Reservoir {
 
-public class Kettle {
-
-    private int maxVolumeKettle = 1000;
     private int volumeKettle;
     private int tempKettle;
     private int heatMax;
 
-    Water water1 = new Water();
-
-    public int fillKettleFullWater() {
-        for (; volumeKettle < maxVolumeKettle; ) {
-            this.volumeKettle = volumeKettle + water1.getWater();
-        }
-        this.tempKettle = water1.getInfoTempWater();
-        return volumeKettle;
+    public Kettle() {
+        super(1500);
+    }
+    public Kettle(int maxVolume) {
+        super(maxVolume);
     }
 
+//Чайник имеет емкость для хранения воды и умеет нагревать содержимое.
 
-    public int preheatWater() {
-        if (volumeKettle > 0) {
-            this.tempKettle = water1.getInfoTempWater();
-            this.heatMax = water1.getInfoMaxTempWater();
-            for (; tempKettle < heatMax; tempKettle++) {
-            }
-            return tempKettle;
-        } else {
-            return tempKettle;
-        }
+//Все что чайник должен уметь делать =  набрать воду, нагревать воду, отдавать нагретую или нет воду !
+
+    public void setMaxWater(Water w)
+    {
+        w = new Water(w.getWater());
+        w.setVolumeWater(super.maxVolume);
+
+    };
+
+    public void setMaxTempWater(Water w)
+    {
+        w.setTempWater(w.maxTempWater);
+    };
+
+  //  public int getHotWater () {
+
+  //    return ;
+  //  };
+
+    //для выполнения основных трех методов необходимо добавить вспомогательные
+
+    public int getVolumeKettle() {
+        return volumeKettle;} //Возвращает максимальный объем
 
 
-    }
 
-    public int getInfoVolumeKettle() {
-        return volumeKettle;
-    }
 
-    public int getInfoTempKettle() {
-        return tempKettle;
-    }
 
-    public void getHotWater() {
-    }
+
+  //  private int fillFullWater() {
+   //     this.volumeKettle = volumeKettle + water1.getWater(maxVolume); //
+    //    this.tempKettle = water1.getTempWater();
+    //    return water1.setVolumeWater(volumeKettle);}
+
+
+   // private int preheatKettle() {
+   //     this.heatMax = water1.maxTempWater; //Греть воду будем до температуры кипения
+   //     for (; tempKettle < heatMax; tempKettle++) ; //Если температура чайника меньше температуры кипения увеличить на 1 градус
+    //    return tempKettle;}
+
+
+
 }
+//     this.tempKettle = water1.setTempWater(tempKettle); // Присваиваем температуру чайника воде
+//   this.volume = hotWater1.setVolumeHotWater(volume); // Возвращаем нагретое колличество горячей воды
+
+//Подсказка от Степана
+//Надо передать значение, значит нужен метод. set
+//Надо забрать значение, значит нужен метод. get
+//
+//        Kettle k1 = new Kettle();
+//        k1.setWater(new Water());
+//
+//        Kettle k2 = new Kettle();
+//        k2.setWater(k1.getWater());
+
+// Так что ты можешь передать объект в метод, внутри метода обновить что-то в объекте.
+// И этот объект у тебя будет изменён, так что после вызова метода у тебя будут уже другие значения.
+// Например:
+//
+// Создать чайник;
+// Кулер.заполнитьЧайник(чайник);
+// чайник.дайВоды();
+//
+// Вот тут ты передаешь чайник в кулер, и ты этот же чайник используешь уже заполненным

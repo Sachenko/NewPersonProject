@@ -37,7 +37,7 @@ public class Person {
     @Override
     public String toString() {
         return "Name=" + getName() + "\n" + "Money=" + getMoney() + "\n" + "Age=" + getAge()
-                + "\n" + cup.getCup() + "\n" + "=============";
+                + "\n" + "" + "\n" + "=============";
     }
 }
 

@@ -1,9 +1,16 @@
 package TeaKit;
 
-public class Cup {
+// Имеет небольшой объем и удобную ручку для удобства. Обычно именно из нее наслаждаются напитком.
+
+public class Cup extends Reservoir {
     private String cup = "empty Cup";
-    private int volumeCup;
-    public String getCup() {
+
+    public Cup () {
+        super(300);
+    }
+
+    public String getCup( ) {
+
         return cup;
     }
 }
