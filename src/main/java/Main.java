@@ -14,13 +14,20 @@ public class Main {
         System.out.println(person1);
 
         Kettle testKettle = new Kettle();
-        Water testWater = new Water(testKettle.maxVolume);
+        Water testWater = new Water();
+
+        System.out.println(testWater); //Вывожу тест на печать до чайника
+
         testKettle.setMaxWater(testWater); //Наливаю чайник
         testKettle.setMaxTempWater(testWater); //Включаю и нагреваю воду
-        System.out.println(testWater.getTempWater());
+
+        System.out.println(testWater); //Вывожу тест на печать после чайника
+
+
+        }
     }
 
 
-}
+
 
 
