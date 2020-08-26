@@ -1,4 +1,4 @@
-package TeaKit;
+package TeaKit.Tank;
 
 public abstract class Reservoir {
     public int maxVolume;

@@ -1,6 +1,6 @@
 package Person;
 
-import TeaKit.Cup;
+import TeaKit.Tank.Cup;
 
 public class Person {
 

@@ -1,7 +1,8 @@
 import Person.Person;
 import Person.PersonGenerator;
-import TeaKit.Kettle;
-import TeaKit.Water;
+import TeaKit.Ingredients.TeaLeaf;
+import TeaKit.Liquid.Water;
+import TeaKit.Tank.Kettle;
 
 
 public class Main {
@@ -15,14 +16,19 @@ public class Main {
 
         Kettle testKettle = new Kettle();
         Water testWater = new Water();
+        TeaLeaf spoonTeaLeaf = new TeaLeaf(1);
 
-        System.out.println(testWater); //Вывожу тест на печать до чайника
+
+
+
+        System.out.println(spoonTeaLeaf); //Вывожу тест на печать
 
         testKettle.setMaxWater(testWater); //Наливаю чайник
         testKettle.setMaxTempWater(testWater); //Включаю и нагреваю воду
-
         System.out.println(testWater); //Вывожу тест на печать после чайника
 
+
+        System.out.println(); //Вывожу тест
 
         }
     }

@@ -1,4 +1,5 @@
-package TeaKit;
+package TeaKit.Liquid;
+
 
 public class Water {
 
@@ -7,12 +8,14 @@ public class Water {
     private int volumeWater;
     private int tempWater;
 
-//При создании объекта класса Water, сработает конструктор который запишет начальное количество воды и ее температуру
-//По логике невозможно создать воду не указав ее начальное колличество. Сделать конструктор с присвоением значения колличества
-
     public Water() {
         this.tempWater = randomTempWater();
-        setVolumeWater(volumeWater);
+        setVolumeWater(1);
+    }
+
+    public Water(int volumeWater){
+        this.volumeWater = volumeWater;
+        this.tempWater = randomTempWater();
     }
 
     public Water getWater() {
@@ -22,6 +25,7 @@ public class Water {
         return tempWater;
     }
     public int getVolumeWater() {return volumeWater;}
+    public int getMaxTempWater() {return maxTempWater;}
 
     public int setTempWater(int t) {
         this.tempWater = t;
@@ -32,7 +36,7 @@ public class Water {
         this.volumeWater = v;
         return volumeWater;
     }
-
+    
     private int randomTempWater() {
         double temp = 1 + Math.random() * 15;
         return (int) Math.round(temp);
