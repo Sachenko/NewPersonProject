@@ -28,7 +28,7 @@ public class Main {
         System.out.println(testWater); //Вывожу тест на печать после чайника
 
 
-        System.out.println(); //Вывожу тест
+
 
         }
     }
