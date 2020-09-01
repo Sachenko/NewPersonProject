@@ -1,6 +1,4 @@
-package Person;
-
-import Person.Person;
+package person;
 
 import java.util.Random;
 

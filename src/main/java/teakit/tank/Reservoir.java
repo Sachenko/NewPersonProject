@@ -1,14 +1,14 @@
-package TeaKit.Tank;
+package teakit.tank;
 
 public abstract class Reservoir {
-    public int maxVolume;
+
+    protected int maxVolume;
 
     public Reservoir (int maxVolume) {
     this.maxVolume = maxVolume;
-    };
-
-    public Reservoir() {
-
     }
 
+    public int getMaxVolume() {
+        return maxVolume;
+    }
 }

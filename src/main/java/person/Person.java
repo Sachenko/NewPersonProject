@@ -1,6 +1,5 @@
-package Person;
+package person;
 
-import TeaKit.Tank.Cup;
 
 public class Person {
 
@@ -31,8 +30,6 @@ public class Person {
     public double getMoney() {
         return money;
     }
-
-    Cup cup = new Cup();
 
     @Override
     public String toString() {
