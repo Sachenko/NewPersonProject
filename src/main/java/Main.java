@@ -1,7 +1,4 @@
-import teakit.ingredient.TeaLeaf;
-import teakit.liquid.Water;
-import teakit.tank.Cup;
-import teakit.tank.Kettle;
+import person.Task;
 
 
 public class Main {
@@ -18,24 +15,30 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Kettle testKettle = new Kettle();
-        Water testWater = new Water();
-        TeaLeaf teaLeaf = new TeaLeaf(1);
-        System.out.println(testWater); // Вывожу тест на печать после чайника
-
-        int maxVolumeFromKettle = testKettle.getMaxVolume(); // max volume from kettle
-        testWater.setVolumeWater(maxVolumeFromKettle);
-        testKettle.setWater(testWater); // Наливаю чайник
-        System.out.println(testWater); // Вывожу тест на печать после чайника
+    Task testTask = new Task();
 
 
-        Cup cup = new Cup(testWater, teaLeaf);
-        System.out.println(cup);
-        System.out.println(testWater);
-        Water testWater2 = new Water();
-        Cup cup2 = new Cup(testWater2, teaLeaf);
-        System.out.println(cup2);
-        System.out.println(testWater2);
 
+//        Kettle testKettle = new Kettle();
+//        Water testWater = new Water();
+//        TeaLeaf teaLeaf = new TeaLeaf(1);
+//        System.out.println(testWater); // Вывожу тест на печать после чайника
+//
+//        int maxVolumeFromKettle = testKettle.getMaxVolume(); // max volume from kettle
+//        testWater.setVolumeWater(maxVolumeFromKettle);
+//        testKettle.setWater(testWater); // Наливаю чайник
+//        System.out.println(testWater); // Вывожу тест на печать после чайника
+//
+//
+//        Cup cup = new Cup(testWater, teaLeaf);
+//        System.out.println(cup);
+//        System.out.println(testWater);
+//        Water testWater2 = new Water();
+//        Cup cup2 = new Cup(testWater2, teaLeaf);
+//        System.out.println(cup2);
+//        System.out.println(testWater2);
+
+//        PersonGenerator generator = new PersonGenerator();
+//        Person testPerson = generator.generate();
     }
 }    

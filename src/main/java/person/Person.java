@@ -1,7 +1,7 @@
 package person;
 
 
-public class Person {
+public class Person implements Comparable<Person> {
 
     // Поля класса
     private String name;
@@ -19,6 +19,10 @@ public class Person {
 
     // Метод класса
 
+    public int compareTo(Person otherPerson) {
+        return Double.compare(money, otherPerson.money);
+    }
+
     public String getName() {
         return name;
     }
@@ -33,7 +37,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Name=" + getName() + "\n" + "Money=" + getMoney() + "\n" + "Age=" + getAge()
+        return "Name = " + getName() + "\n" + "Money = " + getMoney() + "\n" + "Age = " + getAge()
                 + "\n" + "" + "\n" + "=============";
     }
 }
