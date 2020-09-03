@@ -13,7 +13,7 @@ public class Task {
         Timer timer = new Timer();
         TestPrinter printer = new TestPrinter();
         JOptionPane.showMessageDialog(null, "Timer START");
-        timer.schedule(printer, 0, 1000);
+        timer.schedule(printer, 0, 100);
     }
 
 
