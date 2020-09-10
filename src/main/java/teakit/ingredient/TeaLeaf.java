@@ -6,6 +6,7 @@ public class TeaLeaf {
 
     public TeaLeaf(int spoonLeaf) {
         this.spoonLeaf = spoonLeaf;
+        System.out.println(toString());
     }
 
     public TeaLeaf getTeaLeaf() {
@@ -19,12 +20,11 @@ public class TeaLeaf {
 
     @Override
     public String toString() {
-        return "\n" + "--------------" + "\n"
-                + "Ложка чайных листьев в колличестве " + getSpoonLeaf() + "шт"
-                + "\n" + "---------------";
+        return  "--------------" + "\n"
+                + "Ложка чайных листьев в колличестве " + getSpoonLeaf() + "шт";
     }
 
-    public String isTasty() {
+    public String checkTea() {
         return "true";
     }
 }

@@ -6,21 +6,29 @@ import teakit.liquid.Water;
 
 // Имеет небольшой объем и удобную ручку для удобства. Обычно именно из нее наслаждаются напитком.
 public class Cup extends Reservoir {
-
     private Tea tea;
+    private Water water;
 
-    public Cup(Water water, TeaLeaf teaLeaf) {
+    public Cup() {
         super(300);
-        this.tea = new Tea(teaLeaf, water, 300);
-        System.out.println("Create cup Of Tea");
+        System.out.println("--------------" + "\n" +
+                "Empty cup with max volume 300");
+    }
+
+    public void createOfOrdinaryTea(Water water, TeaLeaf teaLeaf) {
+        if (water.getTempWater() < 100) {
+            throw new IllegalArgumentException();
+        } else {
+            new Tea(teaLeaf, water, 300);
+            System.out.println("--------------" + "\n" + "Created cup of ordinary tea inside cup without anything");
+        }
     }
 
     @Override
     public String toString() {
         return "---------------" + "\n"
-                + "All volume Cup = " + maxVolume + "\n" +
-                "Volume inside cup = " + tea.getVolumeWater() + "\n" +
-                "Temp inside cup = " + tea.getTempWater() + "\n" +
-                "---------------";
+                + "Max volume Cup = " + maxVolume + "\n" +
+                "Volume liquid inside cup = " + tea.getVolumeWater() + "\n" +
+                "Temp liquid inside cup = " + tea.getTempWater();
     }
 }

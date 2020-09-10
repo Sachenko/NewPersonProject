@@ -1,4 +1,11 @@
+import person.Person;
+import person.PersonGenerator;
 import person.Task;
+import teakit.liquid.Tea;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 public class Main {
@@ -15,30 +22,25 @@ public class Main {
 
     public static void main(String[] args) {
 
-    Task testTask = new Task();
-
-
-
-//        Kettle testKettle = new Kettle();
-//        Water testWater = new Water();
-//        TeaLeaf teaLeaf = new TeaLeaf(1);
-//        System.out.println(testWater); // Вывожу тест на печать после чайника
-//
-//        int maxVolumeFromKettle = testKettle.getMaxVolume(); // max volume from kettle
-//        testWater.setVolumeWater(maxVolumeFromKettle);
-//        testKettle.setWater(testWater); // Наливаю чайник
-//        System.out.println(testWater); // Вывожу тест на печать после чайника
 //
 //
-//        Cup cup = new Cup(testWater, teaLeaf);
-//        System.out.println(cup);
-//        System.out.println(testWater);
-//        Water testWater2 = new Water();
-//        Cup cup2 = new Cup(testWater2, teaLeaf);
-//        System.out.println(cup2);
-//        System.out.println(testWater2);
-
 //        PersonGenerator generator = new PersonGenerator();
+//
 //        Person testPerson = generator.generate();
+//        Person testPerson2 = generator.generate();
+//        System.out.println(testPerson.toString());
+//        System.out.println(testPerson2.toString());
+//        System.out.println(testPerson.compareTo(testPerson2));
+
+
+      
+
+
+
+
+
+
+        System.out.println("=====================================");
+
     }
 }    

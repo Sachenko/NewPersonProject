@@ -8,7 +8,6 @@ public class Task {
 
     public static int i = 0;
 
-
     public Task() {
         Timer timer = new Timer();
         TestPrinter printer = new TestPrinter();

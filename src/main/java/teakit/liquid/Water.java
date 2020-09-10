@@ -14,9 +14,15 @@ public class Water {
         this(MIN_VOLUME_WATER);
     }
 
+    public Water(int volumeWater, int tempWater) {
+        this.tempWater = tempWater;
+        this.volumeWater = volumeWater;
+    }
+
     public Water(int volumeWater) {
         this.volumeWater = volumeWater;
         this.tempWater = randomTempWater();
+        System.out.println("--------------" + "\n" + "Created " + volumeWater + " Ml water" + "\n" + "With start temperature " + tempWater);
     }
 
 
@@ -30,10 +36,14 @@ public class Water {
 
     public void setVolumeWater(int volumeWater) {
         this.volumeWater = volumeWater;
+        System.out.println("--------------" + "\n" + "Set " + volumeWater + " Ml water");
     }
 
     public void setTempWater(int tempWater) {
-        this.tempWater = tempWater;
+        if (tempWater > MAX_TEMP_WATER) {
+            throw new IllegalArgumentException();
+        } else
+            this.tempWater = tempWater;
     }
 
     private int randomTempWater() {
@@ -53,11 +63,11 @@ public class Water {
 
         return currentWater;
     }
+
     @Override
     public String toString() {
-        return "\n" + "--------------" + "\n"
-                + "Volume Water = " + getVolumeWater() + "\n" + "Temp Water = " + getTempWater()
-                + "\n" + "---------------";
+        return "--------------" + "\n"
+                + "Volume Water = " + getVolumeWater() + "\n" + "Temp Water = " + getTempWater();
     }
 }
 
