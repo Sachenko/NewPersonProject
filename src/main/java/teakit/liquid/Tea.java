@@ -1,12 +1,17 @@
 package teakit.liquid;
+import teakit.ingredient.Lemon;
+import teakit.ingredient.Sugar;
 import teakit.ingredient.TeaLeaf;
-//Чай является водой. В отличие от воды у него есть новые полезные свойста и цвет
-//Чай не может появиться чайного листа и воды
 
 public class Tea extends Water {
 
     public final String COLOR = "Brown";
     private final TeaLeaf teaLeaf;
+    private boolean citrusFlavor = false;
+    private boolean sugarFlavor = false;
+    private int cubeSugar;
+    private int sliceLemon;
+
 
     public Tea(TeaLeaf teaLeaf, Water water, int volumeWater) {
         super(volumeWater);
@@ -20,10 +25,24 @@ public class Tea extends Water {
         }
     }
 
+    public void setTeaSugar(Sugar sugar) {
+        sugarFlavor = sugar.CHECK_SUGAR;
+        cubeSugar =  sugar.getCubeSugar();
+        System.out.println("--------------" + "\n" +  cubeSugar + " Cube sugar added to tea");
+    }
+
+    public void setSliceLemon(Lemon lemon) {
+        citrusFlavor = lemon.CHECK_LEMON;
+        sliceLemon =  lemon.getSliceLemon();
+        System.out.println("--------------" + "\n" +  sliceLemon + " Slice Lemon added to tea");
+    }
+
     @Override
     public String toString() {
         return  "--------------" + "\n"
-                + "It is tea? = " + teaLeaf.checkTea() + "\n"
-                + "Volume Tea = " + getVolumeWater() + "\n" + "Temp Tea = " + getTempWater();
+                + "Volume Tea = " + getVolumeWater() + "\n" + "Temp Tea = " + getTempWater() + "\n"
+                + "Tea is sweet = " + sugarFlavor + " | " + "Number Sugar cube " +  cubeSugar + "\n"
+                + "Taste of the tea citrus = " + citrusFlavor + " | " + "Number slice Lemon " +  sliceLemon
+                ;
     }
 }

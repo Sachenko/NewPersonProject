@@ -1,5 +1,6 @@
 package teakit.tank;
 
+import teakit.ingredient.Sugar;
 import teakit.ingredient.TeaLeaf;
 import teakit.liquid.Tea;
 import teakit.liquid.Water;
@@ -19,9 +20,14 @@ public class Cup extends Reservoir {
         if (water.getTempWater() < 100) {
             throw new IllegalArgumentException();
         } else {
-            new Tea(teaLeaf, water, 300);
+            Tea tea = new Tea(teaLeaf, water, 300);
+            this.tea = tea;
             System.out.println("--------------" + "\n" + "Created cup of ordinary tea inside cup without anything");
         }
+    }
+
+    public Tea getTea() {
+        return this.tea;
     }
 
     @Override

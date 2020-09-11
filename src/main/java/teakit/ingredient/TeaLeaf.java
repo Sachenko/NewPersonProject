@@ -24,7 +24,7 @@ public class TeaLeaf {
                 + "Ложка чайных листьев в колличестве " + getSpoonLeaf() + "шт";
     }
 
-    public String checkTea() {
+    public String checkLeaf() {
         return "true";
     }
 }

@@ -14,9 +14,11 @@ public class Kettle extends Reservoir {
     public Kettle(int maxVolume) {
         super(maxVolume);
         System.out.println("--------------" + "\n" + "Kettle, can Boil a full " + maxVolume + " Ml");
+
+
     }
 
-    public void setMaxTempWater(Water w) {
+    public void setMaxTempWater(Water water) {
         this.water.setTempWater(Water.MAX_TEMP_WATER);
         System.out.println("--------------" + "\n" + "Kettle Boil " + maxVolume + " Ml");
     }

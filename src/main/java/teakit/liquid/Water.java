@@ -1,6 +1,8 @@
 package teakit.liquid;
 
 
+import javax.swing.*;
+
 public class Water {
 
     public static final int MAX_TEMP_WATER = 100;
@@ -9,6 +11,7 @@ public class Water {
 
     private int volumeWater;
     private int tempWater;
+
 
     public Water() {
         this(MIN_VOLUME_WATER);
@@ -62,6 +65,27 @@ public class Water {
         this.tempWater = 0;
 
         return currentWater;
+    }
+
+    public void addIce(int pieceIce, Water water) {
+
+        int newTempWater = tempWater - pieceIce * 15; //Новая температура воды = Темепература старой - колличество Льда * 15
+        int addVolumeWater = volumeWater + pieceIce * 10; //Лед littleBit увеличит итоговый объем
+        if (newTempWater > randomTempWater()) {
+        } else {
+            newTempWater = randomTempWater();
+        }
+        int differenceTemp = tempWater - newTempWater;
+        int addedVolume = pieceIce * 10;
+        water.setTempWater(newTempWater);
+        System.out.println("--------------" + "\n" + "Tea was chilled on " + differenceTemp + " degrees" + " | " + "pieces of ice added " + pieceIce);
+        if (addedVolume > volumeWater / 8) {
+            JOptionPane.showMessageDialog(null,"Очень много льда, уменьши колличество льда...");
+            water.setVolumeWater(addVolumeWater);
+        } else {
+            water.setVolumeWater(addVolumeWater);
+            System.out.println("--------------" + "\n" + "When ice melted Tea volume was added on " + addedVolume + " Ml");
+        }
     }
 
     @Override

@@ -6,7 +6,7 @@ import teakit.ingredient.TeaLeaf;
 import teakit.liquid.Tea;
 import teakit.liquid.Water;
 
-public class TeaKettle extends Reservoir {
+public class TeaKettle <Ingredients> extends Reservoir {
     Tea tea;
     Water water;
 

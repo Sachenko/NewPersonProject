@@ -2,6 +2,7 @@ package teakit.ingredient;
 
 public class Lemon {
     private int sliceLemon; //Долька лимона
+    public final boolean CHECK_LEMON = true;
 
     public Lemon(int sliceLemon) {
         this.sliceLemon = sliceLemon;
@@ -20,7 +21,7 @@ public class Lemon {
     @Override
     public String toString() {
         return  "--------------" + "\n"
-                + " Дольки лимона в колличестве " + getSliceLemon() + "шт";
+                + "Дольки лимона в колличестве " + getSliceLemon() + "шт";
     }
 
     public String checkLemon() {

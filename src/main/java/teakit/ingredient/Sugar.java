@@ -1,31 +1,31 @@
 package teakit.ingredient;
 
-public class Sugar {
-    private int spoonSugar; //Ложка чайных листьев
+import teakit.liquid.Tea;
 
-    public Sugar(int spoonSugar) {
-        this.spoonSugar = spoonSugar;
+public class Sugar {
+    private int cubeSugar; //Ложка чайных листьев
+    public final boolean CHECK_SUGAR = true;
+
+    Tea tea;
+
+    public Sugar(int cubeSugar) {
+        this.cubeSugar = cubeSugar;
         System.out.println(toString());
     }
 
-    public Sugar getSugar() {
-        return this;
-    }
-
-    public int getSpoonSugar() {
-        return this.spoonSugar;
+    public int getCubeSugar() {
+        return cubeSugar;
     }
 
 
     @Override
     public String toString() {
-        return  "--------------" + "\n"
-                + "Ложка сахара в колличестве " + getSpoonSugar() + "шт";
+        return "--------------" + "\n"
+                + "Кубик сахара в колличестве " + getCubeSugar() + " шт";
     }
 
-    public String checkSugar() {
-        return "true";
-    }
+
 }
+
 
 
